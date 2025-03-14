@@ -1,0 +1,18 @@
+.textViewLogo {
+  display: none;
+}
+.logo {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media all and (max-width: 1290px) {
+  .imageViewLogo {
+    display: none;
+  }
+  .textViewLogo {
+    display: block;
+  }
+}

@@ -1,0 +1,47 @@
+.burgerMenuContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.burgerMenuBtn {
+  font-family: "Jost";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20.23px;
+  text-transform: uppercase;
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.burgerMenuBtn img {
+  width: 12px;
+  transition: 0.5s;
+}
+
+.burgerMenuList {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 10px;
+}
+
+.burgerMenuList a {
+  color: black;
+  padding: 5px;
+}
+
+.burgerMenuList a:last-child {
+  color: black;
+  margin: 0 0 15px 0;
+}
+
+.burgerMenuList a:hover {
+  background: #f0f0f0;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}

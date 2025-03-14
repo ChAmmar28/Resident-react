@@ -1,0 +1,236 @@
+.section {
+  padding: 0 80px;
+  overflow: hidden;
+}
+.wrapper {
+  padding: 30px 20px;
+  background: #fff;
+}
+.sectionHeader {
+  height: 47px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.sectionHeader::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #b0852c 0%, #d8c05b 100%);
+}
+.sectionTitle {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 27.27px;
+}
+
+/* grid */
+.gridСontainer {
+  width: 100%;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: 162px 162px 370px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.specialCard {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 453px;
+  color: #fff;
+}
+.specialCategoryName {
+  width: max-content;
+  padding: 6px 16px;
+  background: linear-gradient(90deg, #b0852c 0%, #d8c05b 100%);
+  font-family: "Raleway";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14.09px;
+}
+
+.specialCard h3 {
+  margin: 16px 0;
+  font-family: Georgia;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22.72px;
+}
+.specialCardDate {
+  text-transform: uppercase;
+  color: #e2e2e2;
+  font-family: "Jost";
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13.3px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 3 / 3;
+  position: relative;
+  background: url(imges/9.png) no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: end;
+}
+.div2 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.div3 {
+  grid-area: 1 / 4 / 2 / 5;
+}
+.div4 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.div5 {
+  grid-area: 2 / 4 / 3 / 5;
+}
+.div6 {
+  grid-area: 3 / 1 / 4 / 2;
+}
+.div7 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+.div8 {
+  grid-area: 3 / 3 / 4 / 4;
+}
+.div9 {
+  grid-area: 3 / 4 / 4 / 5;
+}
+
+@media all and (max-width: 1220px) {
+  .gridСontainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 154px 154px 370px 370px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+
+  .div1 {
+    grid-area: 1 / 1 / 3 / 3;
+  }
+  .div2 {
+    grid-area: 1 / 3 / 2 / 4;
+  }
+  .div3 {
+    grid-area: 2 / 3 / 3 / 4;
+  }
+  .div4 {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .div5 {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+  .div6 {
+    grid-area: 3 / 3 / 4 / 4;
+  }
+  .div7 {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+  .div8 {
+    grid-area: 4 / 2 / 5 / 3;
+  }
+  .div9 {
+    grid-area: 4 / 3 / 5 / 4;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .gridСontainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 154px 154px 154px 154px 370px 370px;
+    grid-column-gap: 020px;
+    grid-row-gap: 020px;
+  }
+  .div1 {
+    grid-area: 1 / 1 / 3 / 3;
+  }
+  .div2 {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .div3 {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+  .div4 {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+  .div5 {
+    grid-area: 4 / 2 / 5 / 3;
+  }
+  .div6 {
+    grid-area: 5 / 1 / 6 / 2;
+  }
+  .div7 {
+    grid-area: 5 / 2 / 6 / 3;
+  }
+  .div8 {
+    grid-area: 6 / 1 / 7 / 2;
+  }
+  .div9 {
+    grid-area: 6 / 2 / 7 / 3;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .section {
+    padding: 0;
+  }
+  .sectionHeader {
+    align-items: center;
+  }
+  .sectionHeader a {
+    height: 38px;
+  }
+  .sectionHeader a img {
+    height: 100%;
+  }
+
+  .gridCard {
+    margin-bottom: 20px;
+  }
+  .gridСontainer {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 154px 154px 154px 154px 240px 340px 340px 340px 340px;
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+  }
+  .div1 {
+    grid-area: 5 / 1 / 6 / 2;
+  }
+  .div2 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .div3 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .div4 {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .div5 {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+  .div6 {
+    grid-area: 6 / 1 / 7 / 2;
+  }
+  .div7 {
+    grid-area: 7 / 1 / 8 / 2;
+  }
+  .div8 {
+    grid-area: 8 / 1 / 9 / 2;
+  }
+  .div9 {
+    grid-area: 9 / 1 / 10 / 2;
+  }
+}

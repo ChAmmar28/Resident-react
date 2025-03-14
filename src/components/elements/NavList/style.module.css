@@ -1,0 +1,56 @@
+.headerAd {
+  height: 248px;
+}
+.headerAd img {
+  width: 100%;
+  height: 100%;
+}
+.headerNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 80px;
+}
+
+.headerLogo {
+  width: 180px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navList {
+  width: 856px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navItem {
+  font-family: "Jost";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20.23px;
+  text-transform: uppercase;
+  padding: 15px;
+}
+.navBtn {
+  display: flex;
+  align-items: center;
+  font-family: "Jost";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20.23px;
+  text-transform: uppercase;
+}
+.navBtn img {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+@media all and (max-width: 1290px) {
+  .navList {
+    display: none;
+  }
+}

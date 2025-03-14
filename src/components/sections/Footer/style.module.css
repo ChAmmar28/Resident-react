@@ -1,0 +1,157 @@
+.footer {
+  background: #131212;
+  padding: 63px 150px 18px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+}
+.footerTop {
+  display: flex;
+  height: 90px;
+  justify-content: space-between;
+  position: relative;
+}
+.footerTop::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #b0852c 0%, #d8c05b 100%);
+}
+.footerLogo {
+  width: 275px;
+  height: 69.5px;
+}
+.footerNav {
+  display: flex;
+}
+.footerSocial {
+  display: flex;
+  align-self: flex-end;
+}
+.footerBottom {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.footerSlogan {
+  width: 263px;
+  font-family: "Jost";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20.23px;
+}
+.footerMenuWrapper {
+  display: flex;
+  width: 290px;
+  justify-content: space-between;
+}
+.footerMenu nav {
+  height: 132px;
+  display: flex;
+  flex-direction: column;
+}
+.footerMenu nav a {
+  margin-bottom: 8px;
+  color: #e2e2e2;
+  font-family: "Jost";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20.23px;
+}
+.footerMenuName {
+  font-family: Georgia;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18.18px;
+  margin-bottom: 20px;
+}
+.footerContact {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.footerAddress {
+  width: 152px;
+  height: 46px;
+  font-family: Georgia;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22.72px;
+}
+.footerWorktime {
+  color: #979797;
+  font-family: "Jost";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20.23px;
+  margin: 10px 0;
+}
+.footerEmail {
+  font-family: "Jost";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 17.34px;
+  text-decoration: underline;
+}
+.footerLicense {
+  color: #979797;
+  font-family: "Jost";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+@media all and (max-width: 920px) {
+  .footer {
+    height: auto;
+    align-items: center;
+  }
+
+  .footerBottom {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 20px 0;
+    align-items: center;
+  }
+  .footerMenuWrapper {
+    padding: 20px;
+  }
+}
+@media all and (max-width: 500px) {
+  .footer {
+    padding: 38px 16px;
+  }
+  .footerTop {
+    height: 55px;
+    width: 100%;
+    align-items: center;
+  }
+  .footerLogo {
+    width: 100px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+  }
+  .footerSocial li img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .footerBottom {
+    align-items: start;
+    width: 100%;
+  }
+  .footerSlogan {
+    width: 100%;
+  }
+  .footerMenuWrapper {
+    padding: 20px 0;
+    max-width: 100%;
+  }
+  .footerContact {
+    align-items: start;
+  }
+}

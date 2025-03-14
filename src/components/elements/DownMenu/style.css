@@ -1,0 +1,45 @@
+.menuContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.menuBtn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: "Jost";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20.23px;
+  text-transform: uppercase;
+  padding: 15px;
+}
+
+.menuList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  padding: 10px;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menuList a {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: black;
+}
+
+.menuList a:hover {
+  background: #f0f0f0;
+}
+
+.arrow {
+  transition: 0.5s;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}

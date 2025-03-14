@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Jost";
+  src: url("./assets/fonts/Jost-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("./assets/fonts/Raleway-VariableFont_wght.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  object-fit: cover;
+}
+
+button {
+  border: none;
+  background-color: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: "Jost";
+}
+ul {
+  list-style-type: none;
+}
