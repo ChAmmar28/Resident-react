@@ -1,11 +1,14 @@
 import React from "react";
 import styles from "./style.module.css";
+import { NavLink } from "react-router-dom";
 
-const SliderItem = () => {
+const SliderItem = ({ content }) => {
   return (
-    <div className={styles.sliderItem}>
-      <img src="imges/18.png" alt="С Днем Святого Валентина" />
-    </div>
+    <NavLink to={"/ErrorPage"}>
+      <div className={styles.sliderItem}>
+        <img src={content} alt={content} />
+      </div>
+    </NavLink>
   );
 };
 

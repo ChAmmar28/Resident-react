@@ -1,22 +1,29 @@
 import React from "react";
-import "./style.css";
+import styles from "./style.module.css";
+import { NavLink } from "react-router-dom";
 
-const Down = ({ title, isOpen, onToggle }) => {
+const Down = ({ title, isOpen, onToggle, menuElements }) => {
   return (
-    <div className="menuContainer">
-      <button className="menuBtn" onClick={onToggle}>
-        {title}
+    <div className={styles.menuContainer}>
+      <button className={styles.menuBtn} onClick={onToggle}>
+        <span>{title}</span>
         <img
           src="icons/btnArrowIcon.svg"
           alt="arrow"
-          className={isOpen ? "arrow rotated" : "arrow"}
+          className={isOpen ? styles.rotated : ""}
         />
       </button>
       {isOpen && (
-        <nav className="menuList">
-          <a href="#">Главная</a>
-          <a href="#">О нас</a>
-          <a href="#">Контакты</a>
+        <nav className={styles.menuList}>
+          {menuElements.map((element) => (
+            <NavLink
+              to={element["to"]}
+              key={element["title"]}
+              className={styles.menuListItem}
+            >
+              {element["title"]}
+            </NavLink>
+          ))}
         </nav>
       )}
     </div>

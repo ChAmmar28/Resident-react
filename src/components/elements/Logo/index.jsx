@@ -1,17 +1,17 @@
-// src/components/Logo.js
 import React from "react";
+import { NavLink } from "react-router-dom";
 import styles from "./style.module.css";
 
 const Logo = ({ img }) => {
   return (
-    <a href="#" className={styles.logo}>
+    <NavLink to={"/"} className={styles.Logo}>
       <img
         src="icons/Logo_resident_text.svg"
         alt="Логотип"
         className={styles.imageViewLogo}
       />
       <img src={img} alt="Логотип" className={styles.textViewLogo} />
-    </a>
+    </NavLink>
   );
 };
 

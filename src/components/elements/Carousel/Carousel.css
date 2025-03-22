@@ -10,11 +10,13 @@
   display: flex;
   gap: 20px;
 }
-.sliderTrack {
+
+.sliderNavigation {
   display: flex;
-  gap: 20px;
+  justify-content: start;
+  gap: 16px;
 }
-.sliderFirstItem {
+.sliderNavItem {
   display: flex;
   width: 240px;
   height: 340px;
@@ -41,10 +43,10 @@
   height: 4px;
   background: linear-gradient(90deg, #b0852c 0%, #d8c05b 100%);
 }
-.sliderNavigation {
+
+.carousel-content {
   display: flex;
-  justify-content: start;
-  gap: 16px;
+  gap: 20px;
 }
 
 @media all and (max-width: 1220px) {
@@ -67,12 +69,12 @@
     position: relative;
     padding: 0 0 50px;
   }
-  .sliderTrack {
+  .carousel-content {
     position: absolute;
     left: 0;
     top: 20%;
   }
-  .sliderFirstItem {
+  .sliderNavItem {
     width: 100%;
     height: 425px;
   }

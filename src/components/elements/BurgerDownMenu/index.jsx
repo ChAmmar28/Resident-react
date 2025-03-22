@@ -1,6 +1,7 @@
 import React from "react";
 import "../../../index.css";
 import styles from "./style.module.css";
+import { NavLink } from "react-router-dom";
 
 const BurgerDownMenu = ({
   menuId,
@@ -28,7 +29,13 @@ const BurgerDownMenu = ({
       {isOpen && (
         <nav className={styles.burgerMenuList}>
           {menuElements.map((element) => (
-            <a href="#">{element}</a>
+            <NavLink
+              to={element["to"]}
+              key={element["title"]}
+              className={styles.downListItem}
+            >
+              {element["title"]}
+            </NavLink>
           ))}
         </nav>
       )}

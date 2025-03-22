@@ -4,6 +4,7 @@ import BurgerMenu from "../../elements/BurgerMenu";
 import Logo from "../../elements/Logo";
 import NavList from "../../elements/NavList";
 import styles from "./style.module.css";
+import Search from "../../elements/Search";
 
 const Header = () => {
   return (
@@ -15,9 +16,7 @@ const Header = () => {
         <BurgerMenu></BurgerMenu>
         <Logo img={"icons/Name.svg"}></Logo>
         <NavList></NavList>
-        <button>
-          <img src="icons/searchIcon.svg" alt="Поиск" />
-        </button>
+        <Search></Search>
       </div>
     </header>
   );

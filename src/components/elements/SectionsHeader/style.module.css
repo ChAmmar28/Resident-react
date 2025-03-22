@@ -1,0 +1,42 @@
+.sectionHeader {
+  height: 47px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.sectionHeader::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #b0852c 0%, #d8c05b 100%);
+}
+
+.sectionTitle {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 27.27px;
+}
+.sectionLink img {
+  height: 100%;
+}
+
+@media all and (max-width: 500px) {
+  .sectionHeader {
+    align-items: center;
+  }
+
+  .sectionLink {
+    height: 38px;
+  }
+  .sectionLink img {
+    height: 100%;
+  }
+}
+@media all and (max-width: 380px) {
+  .sectionTitle {
+    font-size: 20px;
+  }
+}

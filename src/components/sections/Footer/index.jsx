@@ -1,12 +1,12 @@
-// src/components/Footer.js
 import React from "react";
 import styles from "./style.module.css";
 import Logo from "../../elements/Logo";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.footerTop}>
+      <header className={styles.footerTop}>
         <Logo img={"icons/wName.svg"}></Logo>
         <div className={styles.footerNav}>
           <nav className={styles.footerSocial}>
@@ -16,17 +16,15 @@ const Footer = () => {
             <a href="#">
               <img src="icons/twiter.svg" alt="Twitter" />
             </a>
-
             <a href="#">
               <img src="icons/instagram.svg" alt="Instagram" />
             </a>
-
             <a href="#">
               <img src="icons/tiktok.svg" alt="TikTok" />
             </a>
           </nav>
         </div>
-      </div>
+      </header>
       <div className={styles.footerBottom}>
         <p className={styles.footerSlogan}>
           - ваш гид в мире строительства, объединяющий всех, кто стремится
@@ -37,23 +35,18 @@ const Footer = () => {
           <div className={styles.footerMenu}>
             <p className={styles.footerMenuName}>Категории</p>
             <nav>
-              <a href="">Недвижимость</a>
-
-              <a href="">Роскошный отдых</a>
-
-              <a href="">Интервью</a>
-
-              <a href="">Дизайн</a>
-
-              <a href="">Продукты</a>
+              <NavLink to={"/RealEstatePage"}>Недвижимость</NavLink>
+              <NavLink to={"/LuxuryVacationPage"}>Роскошный отдых</NavLink>
+              <NavLink to={"/InterviewPage"}>Интервью</NavLink>
+              <NavLink to={"/DesignPage"}>Дизайн</NavLink>
+              <NavLink to={"/ProductsPage"}>Продукты</NavLink>
             </nav>
           </div>
           <div className={styles.footerMenu}>
             <p className={styles.footerMenuName}>Компания</p>
             <nav>
-              <a href="">О нас</a>
-
-              <a href="">Контакты</a>
+              <NavLink to={"/AboutUsPage"}>О нас</NavLink>
+              <NavLink to={"/ContactPage"}>Контакты</NavLink>
             </nav>
           </div>
         </div>

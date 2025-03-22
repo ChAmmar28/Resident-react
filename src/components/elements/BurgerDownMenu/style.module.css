@@ -18,28 +18,40 @@
 }
 
 .burgerMenuBtn img {
-  width: 12px;
-  transition: 0.5s;
+  width: 18px;
+}
+
+.burgerMenuBtn:hover {
+  color: transparent;
+  background-image: linear-gradient(90deg, #b0852c 0%, #d8c05b 100%);
+  background-clip: text;
 }
 
 .burgerMenuList {
   display: flex;
   flex-direction: column;
   padding: 0 0 0 10px;
-}
-
-.burgerMenuList a {
   color: black;
   padding: 5px;
+  font-size: 14px;
 }
 
-.burgerMenuList a:last-child {
-  color: black;
+.downListItem {
+  padding: 10px;
+  transition: 0.2s;
+}
+
+.downListItem:hover {
+  color: transparent;
+  background-image: linear-gradient(90deg, #b0852c 0%, #d8c05b 100%);
+  background-clip: text;
+}
+
+.downListItem:last-child {
   margin: 0 0 15px 0;
 }
-
-.burgerMenuList a:hover {
-  background: #f0f0f0;
+.downListItem:first-child {
+  margin: 0;
 }
 
 .rotated {

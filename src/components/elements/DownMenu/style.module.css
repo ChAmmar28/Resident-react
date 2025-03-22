@@ -15,29 +15,36 @@
   padding: 15px;
 }
 
+.menuBtn:hover {
+  color: transparent;
+  background-image: linear-gradient(90deg, #b0852c 0%, #d8c05b 100%);
+  background-clip: text;
+}
+.menuBtn:hover span {
+  border-bottom: solid 1px #b0852c;
+}
+
 .menuList {
   position: absolute;
   top: 100%;
   left: 0;
   background: white;
-  padding: 10px;
-  min-width: 150px;
+  min-width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.menuList a {
-  padding: 8px 12px;
+.menuListItem {
+  padding: 12px 15px;
   text-decoration: none;
   color: black;
+  font-size: 14px;
 }
 
-.menuList a:hover {
-  background: #f0f0f0;
-}
-
-.arrow {
-  transition: 0.5s;
+.menuListItem:hover {
+  color: transparent;
+  background-image: linear-gradient(90deg, #b0852c 0%, #d8c05b 100%);
+  background-clip: text;
 }
 
 .rotated {

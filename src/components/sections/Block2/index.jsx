@@ -1,8 +1,9 @@
 import React from "react";
+import SectionsHeader from "../../elements/SectionsHeader";
 import Card from "../../elements/Card";
 import styles from "./style.module.css";
 
-const Block2 = () => {
+const Block2 = ({ title }) => {
   const popularPosts = [
     {
       image: "/imges/1.png",
@@ -83,12 +84,7 @@ const Block2 = () => {
   return (
     <section className={styles.section}>
       <div className={styles.wrapper}>
-        <header className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>Роскошный отдых</h2>
-          <a href="#" className={styles.sectionLink}>
-            <img src="icons/goToArrowIcon.svg" alt="" />
-          </a>
-        </header>
+        <SectionsHeader headline={title} />
         <div className={styles.gridСontainer}>
           <div
             className={styles.div1}

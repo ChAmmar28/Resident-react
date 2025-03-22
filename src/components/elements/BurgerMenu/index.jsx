@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./style.module.css";
 import BurgerDownMenu from "../BurgerDownMenu";
+import { NavLink } from "react-router-dom";
 
 const BurgerMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // Состояние для бургер-меню
@@ -19,17 +20,12 @@ const BurgerMenu = () => {
 
   return (
     <div className={styles.burgerContainer}>
-      {/* Кнопка открытия бургер-меню */}
       <button className={styles.burgerMenu} onClick={toggleMenu}>
         <img src="icons/burgerMenu.svg" alt="Menu" />
       </button>
-
-      {/* Затемнённый фон (для закрытия кликом) */}
       {isMenuOpen && (
         <div className={styles.menuOverlay} onClick={toggleMenu}></div>
       )}
-
-      {/* Само меню */}
       <div className={`${styles.menu} ${isMenuOpen ? styles.open : ""}`}>
         <nav className={styles.burgerNavList}>
           <BurgerDownMenu
@@ -37,32 +33,48 @@ const BurgerMenu = () => {
             activeMenu={activeMenu}
             toggleMenu={toggleSubMenu}
             menuTitle={"Недвижимость"}
-            menuElements={["Главная", "О нас", "Контакты"]}
+            menuElements={[{ title: "НЕДВИЖИМОСТЬ", to: "/RealEstatePage" }]}
           />
           <BurgerDownMenu
             menuId="2"
             activeMenu={activeMenu}
             toggleMenu={toggleSubMenu}
             menuTitle={"Роскошный отдых"}
-            menuElements={["Главная", "О нас", "Контакты"]}
+            menuElements={[
+              { title: "ОТЕЛИ", to: "/LuxuryVacationPage#hotels" },
+              { title: "РЕСТОРАНЫ", to: "/LuxuryVacationPage#restorants" },
+              { title: "СПА-САЛОНЫ", to: "/LuxuryVacationPage#spa" },
+            ]}
           />
           <BurgerDownMenu
             menuId="3"
             activeMenu={activeMenu}
             toggleMenu={toggleSubMenu}
             menuTitle={"Дизайн"}
-            menuElements={["Главная", "О нас", "Контакты"]}
+            menuElements={[{ title: "ДИЗАЙН", to: "/DesignPage#" }]}
           />
 
-          <a className={styles.navItem} onClick={toggleMenu}>
+          <NavLink
+            className={styles.navItem}
+            onClick={toggleMenu}
+            to={"/ProductsPage"}
+          >
             Продукты
-          </a>
-          <a className={styles.navItem} onClick={toggleMenu}>
+          </NavLink>
+          <NavLink
+            className={styles.navItem}
+            onClick={toggleMenu}
+            to={"/ProductsPage"}
+          >
             Интервью
-          </a>
-          <a className={styles.navItem} onClick={toggleMenu}>
+          </NavLink>
+          <NavLink
+            className={styles.navItem}
+            onClick={toggleMenu}
+            to={"/ProductsPage"}
+          >
             Контакты
-          </a>
+          </NavLink>
         </nav>
       </div>
     </div>
